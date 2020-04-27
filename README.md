@@ -4,14 +4,14 @@ Create a Pod with two containers, both with image busybox and command "echo hell
 
 ### <a name="spark">Spark</a>
 Using the two datasets voltage and current calculate the power consumed. 
----
+```
 Power(t)=Current(t)*Volatge(t)
----
+```
 
 The output shall look like below
 
-| Time | Voltage  |  Current |     Power  |  
-| --------------- | -------- | ---------- |
+| Time | Voltage  |  Current |   Power    |  
+| ---- | -------- | -------- | ---------- |
 |0	   | 121      |  774	 |  93654     | 
 |0.01  | 23	      |  774	 |  17802     |
 |0.02  | 136	  |  774	 |  105264    |
@@ -25,4 +25,5 @@ The output shall look like below
 |0.1   | 182	  |  444	 |  80808     |
 |0.11  | 196	  |  444	 |  87024     |
 |0.12  | 80	      |  444	 |  35520     |
+
 ...
