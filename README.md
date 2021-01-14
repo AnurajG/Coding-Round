@@ -27,11 +27,12 @@ The output shall look like below
 ...
 
 ### <a name="kube">SQL</a>
-Write an SQL query to calculate the MAX Power every 1/10th of second (0.1).
+Write an SQL query to calculate the MAX Power every 1/10th of second (0.1) from the above output.
 | Time |   Power    |  
 | ---- | ---------- |
 |0	   |  166410    | 
 |0.1   |  89688     |
+
 ...
 
 ### <a name="kube">Kubernetes</a>
