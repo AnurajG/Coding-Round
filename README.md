@@ -1,9 +1,7 @@
 # Coding-Round
-### <a name="kube">Kubernetes</a>
-Create a Pod with two containers, both with image busybox and command "echo hello; sleep 3600". Connect to the second container and run 'ls'
 
 ### <a name="spark">Spark</a>
-Using the two datasets voltage and current calculate the power consumed. 
+Using the two datasets voltage and current calculate the power consumed. Please note that we need to upsample Current to match the frequency of Voltage recordings.
 ```
 Power(t)=Current(t)*Volatge(t)
 ```
@@ -27,3 +25,14 @@ The output shall look like below
 |0.12  | 80	      |  444	 |  35520     |
 
 ...
+
+### <a name="kube">Kubernetes</a>
+Write an SQL query to calculate the MAX Power every 1/10th of second (0.1).
+| Time |   Power    |  
+| ---- | ---------- |
+|0	   |  166410    | 
+|0.1   |  89688     |
+...
+
+### <a name="kube">Kubernetes</a>
+Create a Pod with two containers, both with image busybox and command "echo hello; sleep 3600". Connect to the second container and run 'ls'
