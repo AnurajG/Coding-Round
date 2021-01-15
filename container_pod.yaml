@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-containers
+spec:
+  restartPolicy: Never
+
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+
+  containers:
+
+  - name: busybox1
+    image: busybox
+    command: ["/bin/sh"]
+      args: ["-c", "echo hello; sleep 3600"]
+
+  - name: busybox2
+    image: busybox
+    command: ["/bin/sh"]
+    args: ["-c", "ls"]
+
+
+Commands:
+  kubectl exec -it two-containers -c busybox1 -- /bin/bash echo hello; sleep 3600
