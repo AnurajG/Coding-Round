@@ -26,6 +26,7 @@ result.createOrReplaceTempView("result1")
 # Logic-2 calculate the MAX Power every 1/10th of second (0.1) from the above output.
 result2 = spark.sql('select  time,max(power) from result1 group by time having sum(time)>=1/10')
 # OR
-result3 = spark.sql('select agg_time as time ,max(power) as power from (select case when time=0 then "0.0"" else substring(cast(time as varchar),0,3)) end as agg_time,power)a group by agg_time')
+result3 = spark.sql('select agg_time as time ,max(power) as power from (select case when time=0 then "0.0"" else substring(cast(time as varchar),0,3)) end as agg_time,power from result1)a group by agg_time')
+
 
 print(result2.collect())
