@@ -8,7 +8,7 @@ spark = SparkSession.builder.appName("SparkSql example").getOrCreate()
 
 # Reading both the CSV file using spark read
 df_current = spark.read.load(cwd+"data/current.csv", format="csv")
-df_voltage = spark.read.load(cwd+"data/voltage.csv", format="csv")
+df_voltage = spark.read.load(cwd+"daa/voltage.csv", format="csv")
 
 # Creating temp view from the dataframe for current
 df_current.createOrReplaceTempView("current")
